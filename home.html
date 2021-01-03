@@ -3,30 +3,81 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Soho</title>
+		<title>Soho</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500&display=swap" rel="stylesheet">	
         <link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-		<header>
-			<h1>Soho</h1>
-			<nav></nav>
+		<header class="header">
+			<div class="wrap">
+				<button class="open_close" aria-label="open and close the navigation">
+					<span class="line"></span>
+					<span class="line"></span>
+					<span class="line"></span>
+				</button>
+				<nav class="main_nav">
+					<ul class="main">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Features</a></li>
+						<li><a href="#">Pages</a></li>
+						<li><a href="#">Categories</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Shop</a></li>
+						<li><a class="current" href="#">Contact</a></li>
+					</ul>
+				</nav>
+				
+				<button class="search_icon" aria-label="search the site">
+					<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" 
+					clip-rule="evenodd"><path d="M15.853 16.56c-1.683 1.517-3.911 2.44-6.353 2.44-5.243 
+					0-9.5-4.257-9.5-9.5s4.257-9.5 9.5-9.5 9.5 4.257 9.5 9.5c0 2.442-.923 4.67-2.44 
+					6.353l7.44 7.44-.707.707-7.44-7.44zm-6.353-15.56c4.691 0 8.5 3.809 8.5 8.5s-3.809 
+					8.5-8.5 8.5-8.5-3.809-8.5-8.5 3.809-8.5 8.5-8.5z"/></svg>
+				</button>
+				
+				<form class="search_bar ">
+					<label for="search" class="screen-reader-text">Type your search</label>
+					<input id= "search" type="search" placeholder="search the site">
+					<label for="submit"class="screen-reader-text">Submit</label>
+					<input id="submit" type="submit" value="Search">
+				</form>
+
+				
+
+			</div>
 		</header>
 
-		<main>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit.
-				Provident repellendus aliquam reprehenderit, voluptatum nisi
-				nihil est maiores, corporis laudantium, quibusdam nam. Quam
-				natus ducimus debitis omnis vitae sit aut quibusdam.
-			</p>
+		<main class="main">
+			<section class="banner">
+				<div class="h1_wrap">
+					<h1 class="block_header">Soho</h1>
+				</div>
+
+				<!-- intentional leaving image null value; screen reader will skip -->
+				<figure class="bg_image">
+					<img src="https://picsum.photos/1920/1080" alt="">
+				</figure>
+			</section>
+
+			<section class="block_body">
+				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea aliquam eligendi quisquam minus autem. Distinctio reprehenderit culpa saepe nesciunt est maxime aperiam corporis. Ratione, odit commodi illum minima quae reiciendis?</p>
+				<form>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi odit suscipit ipsam id ex odio hic, a ullam deserunt quos est. Reiciendis accusamus animi aspernatur? Ut ipsa aliquid laborum nobis!</form>
+			</section>
+
+			<aside class="sidebar">
+				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos aperiam aliquam labore quibusdam facere quas! Aliquam sit deserunt similique sed veritatis, illo dolorem vel earum inventore, odit necessitatibus voluptate quia!</p>
+			</aside>
+
+			
+
+
+
 		</main>
 
 		<footer>
 			<p>
-				Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-				Accusantium, voluptas temporibus. Enim, nisi? Quae vel maiores,
-				laboriosam qui ab rerum amet laborum sed facere quia dolore
-				omnis voluptatem eum tempore!
+				Copyright &copy; <span id="copy"></span>
 			</p>
         </footer>
         <script src="scripts/scripts.js"></script>
